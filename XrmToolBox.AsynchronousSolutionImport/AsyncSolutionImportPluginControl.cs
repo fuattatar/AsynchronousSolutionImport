@@ -38,9 +38,7 @@ namespace XrmToolBox.AsynchronousSolutionImport
                 string filePath = openFileDialog.FileName;
                 string fileName = openFileDialog.SafeFileName;
 
-                ExecuteAsyncRequest importRequest = PrepareImportRequest(filePath);
-
-                RunImportRequest(importRequest);
+                txtSolutionPathText.Text = filePath;
             }
         }
 
@@ -65,7 +63,7 @@ namespace XrmToolBox.AsynchronousSolutionImport
 
                     if (result != null)
                     {
-                        MessageBox.Show("Solution is imported and published");
+                        MessageBox.Show("Solution import process is started. Check it's progress in system job ");
                     }
                 }
             });
@@ -79,11 +77,21 @@ namespace XrmToolBox.AsynchronousSolutionImport
                 {
                     CustomizationFile = File.ReadAllBytes(filePath),
                     PublishWorkflows = true,
+                    
                     OverwriteUnmanagedCustomizations = true,
                 }
             };
 
             return request;
+        }
+
+        private void BtnImport_Click(object sender, EventArgs e)
+        {
+            var solutionPath = txtSolutionPathText.Text;
+
+            ExecuteAsyncRequest importRequest = PrepareImportRequest(solutionPath);
+
+            RunImportRequest(importRequest);
         }
     }
 }
