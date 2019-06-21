@@ -26,38 +26,6 @@ namespace XrmToolBox.AsynchronousSolutionImport
             CloseTool();
         }
 
-        private void GetContacts()
-        {
-            WorkAsync(new WorkAsyncInfo
-            {
-                Message = "Getting accounts",
-                Work = (worker, args) =>
-                {
-                    args.Result = Service.RetrieveMultiple(new QueryExpression("contact")
-                    {
-                        TopCount = 50
-                    });
-                },
-                PostWorkCallBack = (args) =>
-                {
-                    if (args.Error != null)
-                    {
-                        MessageBox.Show(args.Error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    var result = args.Result as EntityCollection;
-                    if (result != null)
-                    {
-                        MessageBox.Show($"Found {result.Entities.Count} contact");
-                    }
-                }
-            });
-        }
-
-        private void BtnGetContacts_Click(object sender, EventArgs e)
-        {
-            ExecuteMethod(GetContacts);
-        }
-
         OpenFileDialog openFileDialog = new OpenFileDialog();
 
         private void BtnSelectSolution_Click(object sender, EventArgs e)
@@ -94,9 +62,10 @@ namespace XrmToolBox.AsynchronousSolutionImport
                     }
 
                     var result = args.Result;
+
                     if (result != null)
                     {
-                        MessageBox.Show("Success");
+                        MessageBox.Show("Solution is imported and published");
                     }
                 }
             });
@@ -113,6 +82,7 @@ namespace XrmToolBox.AsynchronousSolutionImport
                     OverwriteUnmanagedCustomizations = true,
                 }
             };
+
             return request;
         }
     }
