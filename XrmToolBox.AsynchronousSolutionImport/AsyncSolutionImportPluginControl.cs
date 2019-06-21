@@ -16,6 +16,11 @@ namespace XrmToolBox.AsynchronousSolutionImport
             InitializeComponent();
         }
 
+        private void AsyncSolutionImportPluginControl_Load(object sender, EventArgs e)
+        {
+           
+        }
+
         private void BtnClose_Click(object sender, EventArgs e)
         {
             CloseTool();
