@@ -16,11 +16,6 @@ namespace XrmToolBox.AsynchronousSolutionImport
             InitializeComponent();
         }
 
-        private void AsyncSolutionImportPluginControl_Load(object sender, EventArgs e)
-        {
-            ShowInfoNotification("This is a notification that can lead to XrmToolBox repository", new Uri("https://github.com/MscrmTools/XrmToolBox"));
-        }
-
         private void BtnClose_Click(object sender, EventArgs e)
         {
             CloseTool();
