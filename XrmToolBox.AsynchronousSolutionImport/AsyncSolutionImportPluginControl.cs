@@ -69,14 +69,15 @@ namespace XrmToolBox.AsynchronousSolutionImport
             });
         }
 
-        private static ExecuteAsyncRequest PrepareImportRequest(string filePath)
+        private static ExecuteAsyncRequest PrepareImportRequest(string filePath, bool publishWorkflows )
         {
+            
             ExecuteAsyncRequest request = new ExecuteAsyncRequest
             {
                 Request = new ImportSolutionRequest
                 {
                     CustomizationFile = File.ReadAllBytes(filePath),
-                    PublishWorkflows = true,
+                    PublishWorkflows = publishWorkflows,
                     
                     OverwriteUnmanagedCustomizations = true,
                 }
@@ -89,7 +90,7 @@ namespace XrmToolBox.AsynchronousSolutionImport
         {
             var solutionPath = txtSolutionPathText.Text;
 
-            ExecuteAsyncRequest importRequest = PrepareImportRequest(solutionPath);
+            ExecuteAsyncRequest importRequest = PrepareImportRequest(solutionPath,cbPublishAfterImport.Checked);
 
             RunImportRequest(importRequest);
         }
