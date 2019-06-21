@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>Fuat Tatar</authors>
     <owners>$author$</owners>
-    <licenseUrl>https://github.com/fuattatar/XrmToolBox.AsynchronousSolutionImport/blob/master/LICENSE</licenseUrl>
+    <license type="file">LICENSE.txt</license>
     <projectUrl>https://github.com/fuattatar/XrmToolBox.AsynchronousSolutionImport</projectUrl>
    <iconUrl>https://img.icons8.com/nolan/64/000000/import.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -15,4 +15,7 @@
     <copyright>Copyright 2019</copyright>
     <tags>xrmtoolbox plugin,asynchronous,import</tags>
   </metadata>
+  <files>
+      <file src="../LICENSE.txt" target="" />
+  </files>
 </package>
