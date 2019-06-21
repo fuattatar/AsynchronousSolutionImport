@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AsynchronousSolutionImport</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Fuat Tatar</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/fuattatar/XrmToolBox.AsynchronousSolutionImport/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/fuattatar/XrmToolBox.AsynchronousSolutionImport</projectUrl>
+   <iconUrl>https://img.icons8.com/nolan/64/000000/import.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>First Release</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>xrmtoolbox plugin,asynchronous,import</tags>
+  </metadata>
+</package>
