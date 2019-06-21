@@ -11,7 +11,7 @@
    <iconUrl>https://img.icons8.com/nolan/64/000000/import.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>First Release</releaseNotes>
+    <releaseNotes>Publish Workflows setting is added</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>xrmtoolbox plugin,asynchronous,import</tags>
   </metadata>
