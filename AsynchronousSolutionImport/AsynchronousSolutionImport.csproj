@@ -142,6 +142,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>IF NOT EXIST Plugins mkdir Plugins
-move /Y $(TargetFileName) Plugins</PostBuildEvent>
+copy/Y $(TargetFileName) Plugins</PostBuildEvent>
   </PropertyGroup>
 </Project>
