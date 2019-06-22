@@ -7,7 +7,7 @@ using System.IO;
 using System.Windows.Forms;
 using XrmToolBox.Extensibility;
 
-namespace XrmToolBox.AsynchronousSolutionImport
+namespace AsynchronousSolutionImport
 {
     public partial class AsyncSolutionImportPluginControl : PluginControlBase
     {

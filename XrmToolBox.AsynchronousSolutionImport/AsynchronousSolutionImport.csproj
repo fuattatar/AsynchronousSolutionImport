@@ -8,8 +8,8 @@
     <ProjectGuid>{E0E36D61-F123-4999-AEF8-49EED069F672}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XrmToolBox.AsynchronousSolutionImport</RootNamespace>
-    <AssemblyName>XrmToolBox.AsynchronousSolutionImport</AssemblyName>
+    <RootNamespace>AsynchronousSolutionImport</RootNamespace>
+    <AssemblyName>AsynchronousSolutionImport</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

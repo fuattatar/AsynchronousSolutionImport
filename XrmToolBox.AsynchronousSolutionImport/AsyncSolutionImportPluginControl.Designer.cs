@@ -1,4 +1,4 @@
-﻿namespace XrmToolBox.AsynchronousSolutionImport
+﻿namespace AsynchronousSolutionImport
 {
     partial class AsyncSolutionImportPluginControl
     {

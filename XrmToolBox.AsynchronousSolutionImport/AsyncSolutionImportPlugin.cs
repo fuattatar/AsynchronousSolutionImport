@@ -2,7 +2,7 @@
 using XrmToolBox.Extensibility;
 using XrmToolBox.Extensibility.Interfaces;
 
-namespace XrmToolBox.AsynchronousSolutionImport
+namespace AsynchronousSolutionImport
 {
     [Export(typeof(IXrmToolBoxPlugin)),
     ExportMetadata("BackgroundColor", "MediumBlue"),
