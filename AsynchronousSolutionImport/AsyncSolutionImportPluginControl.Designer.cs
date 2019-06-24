@@ -34,9 +34,9 @@
             this.txtSolutionPathText = new System.Windows.Forms.TextBox();
             this.btnImport = new System.Windows.Forms.Button();
             this.gbAdvanceSettings = new System.Windows.Forms.GroupBox();
-            this.cbConvertToManaged = new System.Windows.Forms.CheckBox();
-            this.cbHoldingSolution = new System.Windows.Forms.CheckBox();
             this.cbSkipProductUpdateDependencies = new System.Windows.Forms.CheckBox();
+            this.cbHoldingSolution = new System.Windows.Forms.CheckBox();
+            this.cbConvertToManaged = new System.Windows.Forms.CheckBox();
             this.gbSettings.SuspendLayout();
             this.gbAdvanceSettings.SuspendLayout();
             this.SuspendLayout();
@@ -101,15 +101,15 @@
             this.gbAdvanceSettings.TabStop = false;
             this.gbAdvanceSettings.Text = "Advance Settings";
             // 
-            // cbConvertToManaged
+            // cbSkipProductUpdateDependencies
             // 
-            this.cbConvertToManaged.AutoSize = true;
-            this.cbConvertToManaged.Location = new System.Drawing.Point(7, 19);
-            this.cbConvertToManaged.Name = "cbConvertToManaged";
-            this.cbConvertToManaged.Size = new System.Drawing.Size(127, 17);
-            this.cbConvertToManaged.TabIndex = 7;
-            this.cbConvertToManaged.Text = "Convert To Managed";
-            this.cbConvertToManaged.UseVisualStyleBackColor = true;
+            this.cbSkipProductUpdateDependencies.AutoSize = true;
+            this.cbSkipProductUpdateDependencies.Location = new System.Drawing.Point(7, 67);
+            this.cbSkipProductUpdateDependencies.Name = "cbSkipProductUpdateDependencies";
+            this.cbSkipProductUpdateDependencies.Size = new System.Drawing.Size(197, 17);
+            this.cbSkipProductUpdateDependencies.TabIndex = 9;
+            this.cbSkipProductUpdateDependencies.Text = "Skip Product Update Dependencies";
+            this.cbSkipProductUpdateDependencies.UseVisualStyleBackColor = true;
             // 
             // cbHoldingSolution
             // 
@@ -121,15 +121,15 @@
             this.cbHoldingSolution.Text = "Holding Solution";
             this.cbHoldingSolution.UseVisualStyleBackColor = true;
             // 
-            // cbSkipProductUpdateDependencies
+            // cbConvertToManaged
             // 
-            this.cbSkipProductUpdateDependencies.AutoSize = true;
-            this.cbSkipProductUpdateDependencies.Location = new System.Drawing.Point(7, 67);
-            this.cbSkipProductUpdateDependencies.Name = "cbSkipProductUpdateDependencies";
-            this.cbSkipProductUpdateDependencies.Size = new System.Drawing.Size(197, 17);
-            this.cbSkipProductUpdateDependencies.TabIndex = 9;
-            this.cbSkipProductUpdateDependencies.Text = "Skip Product Update Dependencies";
-            this.cbSkipProductUpdateDependencies.UseVisualStyleBackColor = true;
+            this.cbConvertToManaged.AutoSize = true;
+            this.cbConvertToManaged.Location = new System.Drawing.Point(7, 19);
+            this.cbConvertToManaged.Name = "cbConvertToManaged";
+            this.cbConvertToManaged.Size = new System.Drawing.Size(127, 17);
+            this.cbConvertToManaged.TabIndex = 7;
+            this.cbConvertToManaged.Text = "Convert To Managed";
+            this.cbConvertToManaged.UseVisualStyleBackColor = true;
             // 
             // AsyncSolutionImportPluginControl
             // 

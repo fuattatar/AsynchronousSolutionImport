@@ -71,7 +71,6 @@ namespace AsynchronousSolutionImport
 
         private static ExecuteAsyncRequest PrepareImportRequest(string filePath, params bool[] values)
         {
-            
             ExecuteAsyncRequest request = new ExecuteAsyncRequest
             {
                 Request = new ImportSolutionRequest
@@ -93,6 +92,13 @@ namespace AsynchronousSolutionImport
         private void BtnImport_Click(object sender, EventArgs e)
         {
             var solutionPath = txtSolutionPathText.Text;
+
+            if (!System.IO.Directory.Exists(solutionPath))
+            {
+                MessageBox.Show("Incorrect path. Please select solution zip file");
+
+                return;
+            }
 
             ExecuteAsyncRequest importRequest = PrepareImportRequest
                 (
