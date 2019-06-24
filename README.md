@@ -1,4 +1,4 @@
-# AsynchronousSolutionImport
+# Asynchronous Solution Import
 
 
 Plugin for the XRMToolBox which will allow you to import solution asynchronous.
