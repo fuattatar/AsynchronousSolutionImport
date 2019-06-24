@@ -69,7 +69,7 @@ namespace AsynchronousSolutionImport
             });
         }
 
-        private static ExecuteAsyncRequest PrepareImportRequest(string filePath, bool publishWorkflows )
+        private static ExecuteAsyncRequest PrepareImportRequest(string filePath, params bool[] values)
         {
             
             ExecuteAsyncRequest request = new ExecuteAsyncRequest
@@ -77,9 +77,13 @@ namespace AsynchronousSolutionImport
                 Request = new ImportSolutionRequest
                 {
                     CustomizationFile = File.ReadAllBytes(filePath),
-                    PublishWorkflows = publishWorkflows,
-                    
                     OverwriteUnmanagedCustomizations = true,
+                    PublishWorkflows = values[0],
+                    ConvertToManaged = values[1],
+                    HoldingSolution = values[2],
+                    SkipProductUpdateDependencies = values[3]
+                    
+                    
                 }
             };
 
@@ -90,7 +94,15 @@ namespace AsynchronousSolutionImport
         {
             var solutionPath = txtSolutionPathText.Text;
 
-            ExecuteAsyncRequest importRequest = PrepareImportRequest(solutionPath,cbPublishAfterImport.Checked);
+            ExecuteAsyncRequest importRequest = PrepareImportRequest
+                (
+                solutionPath,
+                cbPublishAfterImport.Checked,
+                cbConvertToManaged.Checked,
+                cbHoldingSolution.Checked,
+                cbSkipProductUpdateDependencies.Checked
+
+                );
 
             RunImportRequest(importRequest);
         }
