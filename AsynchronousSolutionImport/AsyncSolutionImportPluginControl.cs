@@ -63,7 +63,7 @@ namespace AsynchronousSolutionImport
 
                     if (result != null)
                     {
-                        MessageBox.Show("Solution import process is started. Check it's progress in system job ");
+                        MessageBox.Show("Solution import process is started. Check it's progress in Settings>System Job ");
                     }
                 }
             });
@@ -93,7 +93,7 @@ namespace AsynchronousSolutionImport
         {
             var solutionPath = txtSolutionPathText.Text;
 
-            if (!System.IO.Directory.Exists(solutionPath))
+            if (string.IsNullOrEmpty(solutionPath))
             {
                 MessageBox.Show("Incorrect path. Please select solution zip file");
 
