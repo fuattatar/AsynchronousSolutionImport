@@ -12,8 +12,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
-      --1.2019.6.24 Logo added
-      Versioning is changed</releaseNotes>
+      --1.2019.6.27 Import button will be disabled until you select the solution file. Plugin name and description corrected. Project is downgraded from 4.7.2 to 4.6.2. 
+      </releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>xrmtoolbox plugin,asynchronous,import</tags>
   </metadata>
