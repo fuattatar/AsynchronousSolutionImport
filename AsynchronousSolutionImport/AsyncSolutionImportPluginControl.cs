@@ -63,23 +63,26 @@ namespace AsynchronousSolutionImport
 
                     if (result != null)
                     {
-                        MessageBox.Show("Solution import process is started. Check it's progress in system job ");
+                        MessageBox.Show("Solution import process is started. Check it's progress in Settings>System Job ");
                     }
                 }
             });
         }
 
-        private static ExecuteAsyncRequest PrepareImportRequest(string filePath, bool publishWorkflows )
+        private static ExecuteAsyncRequest PrepareImportRequest(string filePath, params bool[] values)
         {
-            
             ExecuteAsyncRequest request = new ExecuteAsyncRequest
             {
                 Request = new ImportSolutionRequest
                 {
                     CustomizationFile = File.ReadAllBytes(filePath),
-                    PublishWorkflows = publishWorkflows,
-                    
                     OverwriteUnmanagedCustomizations = true,
+                    PublishWorkflows = values[0],
+                    ConvertToManaged = values[1],
+                    HoldingSolution = values[2],
+                    SkipProductUpdateDependencies = values[3]
+                    
+                    
                 }
             };
 
@@ -90,7 +93,22 @@ namespace AsynchronousSolutionImport
         {
             var solutionPath = txtSolutionPathText.Text;
 
-            ExecuteAsyncRequest importRequest = PrepareImportRequest(solutionPath,cbPublishAfterImport.Checked);
+            if (string.IsNullOrEmpty(solutionPath))
+            {
+                MessageBox.Show("Incorrect path. Please select solution zip file");
+
+                return;
+            }
+
+            ExecuteAsyncRequest importRequest = PrepareImportRequest
+                (
+                solutionPath,
+                cbPublishAfterImport.Checked,
+                cbConvertToManaged.Checked,
+                cbHoldingSolution.Checked,
+                cbSkipProductUpdateDependencies.Checked
+
+                );
 
             RunImportRequest(importRequest);
         }

@@ -11,7 +11,9 @@
    <iconUrl>https://img.icons8.com/nolan/64/000000/import.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Versioning is changed</releaseNotes>
+    <releaseNotes>
+      --1.2019.6.24 Logo added
+      Versioning is changed</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>xrmtoolbox plugin,asynchronous,import</tags>
   </metadata>
