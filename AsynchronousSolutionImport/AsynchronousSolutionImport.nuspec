@@ -7,7 +7,7 @@
     <authors>Fuat Tatar</authors>
     <owners>$author$</owners>
     <license type="file">LICENSE.txt</license>
-    <projectUrl>https://github.com/fuattatar/XrmToolBox.AsynchronousSolutionImport</projectUrl>
+    <projectUrl>https://github.com/fuattatar/AsynchronousSolutionImport</projectUrl>
    <iconUrl>https://img.icons8.com/nolan/64/000000/import.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
