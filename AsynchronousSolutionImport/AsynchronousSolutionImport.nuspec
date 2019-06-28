@@ -12,12 +12,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
-      --1.2019.6.30 XrmToolBox installation issue has been fixed.
+      --1.2019.6.31 XrmToolBox installation issue has been fixed.
       </releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>xrmtoolbox plugin,asynchronous,import</tags>
   </metadata>
   <files>
       <file src="../LICENSE.txt" target="" />
+      <file src="bin\Release\AsynchronousSolutionImport.dll" target="lib\net462\Plugins" />
   </files>
 </package>
