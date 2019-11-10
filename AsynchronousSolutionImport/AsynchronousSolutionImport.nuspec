@@ -12,6 +12,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+      --1.2019.11.11 Minor changes with System Jobs grid view
+      --1.2019.11.10 System Jobs grid view is added.
       --1.2019.6.31 XrmToolBox installation issue has been fixed.
       </releaseNotes>
     <copyright>Copyright 2019</copyright>
